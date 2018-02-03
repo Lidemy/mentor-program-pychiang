@@ -1,3 +1,9 @@
 export const isPalindromes = (str) => {
-  return false;
+    var origin = str.split('');
+    var reversed = origin.reverse().join('');
+
+    if (str === reversed) {
+        return true;
+    }
+    return false;
 }

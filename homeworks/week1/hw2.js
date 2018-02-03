@@ -10,3 +10,12 @@ export const capitalize = (str) => {
         return str.join('');
     }
 }
+
+/*
+可以優化如下：
+export const capitalize = (str) => {
+    str = str.split(''); 
+    str[0] = str[0].toUpperCase();
+    return str.join('');
+}
+*/
