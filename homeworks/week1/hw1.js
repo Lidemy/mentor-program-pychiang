@@ -1,3 +1,9 @@
 export const stars = (n) => {
-  return;
+    var arr = [];
+    var str = '';
+    for (var i = 0; i < n; i++) {
+        str += '*';
+        arr.push(str);
+    }
+    return arr;
 }
