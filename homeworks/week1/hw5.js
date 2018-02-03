@@ -26,5 +26,6 @@ export const add = (a, b) => {
     if (addOne) {
         result = '1' + output; 
     }
+    
     return result;
 }
