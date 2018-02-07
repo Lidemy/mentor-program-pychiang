@@ -19,3 +19,10 @@ export const capitalize = (str) => {
     return str.join('');
 }
 */
+
+/*
+進階解法：
+var capitalize = function(str) {
+    return str.replace(str[0], str[0].toUpperCase());
+}
+*/
