@@ -1,0 +1,96 @@
+@charset "UTF-8"
+
+=size($w,$h)
+    width: $w
+    height: $h
+
+*
+    font-family: 微軟正黑體
+    position: relative
+
+html,body
+    margin: 0
+    padding: 0
+    +size(100%,100%)
+
+.navbar
+    position: fixed
+    padding: 0 10px
+    +size(100%,50px)
+    background-color: #343a40
+    top: 0
+    left: 0
+    .icon
+        display: inline-block
+        color: #fff
+        font-size: 20px
+        line-height: 50px
+    ul
+        display: inline-block
+        list-style: none
+        font-size: 18px
+        margin: 0 0 0 10px 
+        padding: 0
+        li
+            display: inline-block
+            margin-left: 15px
+            transition-duration: 0.5s
+            color: #acadaf
+            &:hover
+                color: #fff
+                cursor: pointer
+        
+.top-part
+    margin-top: 50px
+    padding: 40px 0
+    width: 100%
+    background-color: #e9ecef
+
+.container
+    margin: 0 auto
+    padding: 0 15px
+    max-width: 960px
+    .more
+        background-color: #007bff
+        font-size: 18px
+        &:hover
+            background-color: #0c5cad
+
+button
+    border: none
+    border-radius: 4px
+    color: #fff
+    padding: 13px
+    transition-duration: 1s
+    &:hover
+        cursor: pointer
+
+.storys
+    padding: 50px 15px
+    .story
+        display: inline-block
+        max-width: 300px
+        .details
+            background-color: #6c757d
+            font-size: 14px
+            &:hover
+                background-color: #575d63
+
+.title
+    font-size: 68px
+
+.content
+    margin: 10px 0
+    font-size: 14px
+
+.heading
+    font-size: 30px
+
+.footer
+    font-size: 14px
+    border-top: 1px solid #e8ebed
+    padding-top: 15px
+
+@media screen and (min-width: 750px)
+    .story
+        display: block
