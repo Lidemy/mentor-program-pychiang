@@ -7,3 +7,10 @@ export const isPalindromes = (str) => {
     }
     return false;
 }
+
+/*
+進階解法：
+var isPalindromes = function(str) {
+    return str === str.split('').reverse().join('');
+}
+*/

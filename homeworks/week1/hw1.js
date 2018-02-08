@@ -27,3 +27,13 @@ const getStars = (n) => {
     return str;
 }
 */
+
+/*
+進階解法：
+var stars = function(n) {
+    var str = "";
+    return Array(n).fill().map(function(str, i) {
+        return "*".repeat(i + 1);
+    });
+}
+*/
