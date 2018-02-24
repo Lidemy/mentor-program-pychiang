@@ -1,0 +1,88 @@
+@charset "UTF-8";
+* {
+  font-family: "Roboto", 微軟正黑體, sans-serif;
+  color: #0f0e0e; }
+
+html, body, .container {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0; }
+
+.container__banner {
+  width: 100%;
+  height: 260px;
+  margin-top: 0;
+  background: url("https://source.unsplash.com/pUAM5hPaCRI") no-repeat center;
+  background-size: cover; }
+
+.container__background {
+  background: #ede7f6; }
+
+.form {
+  position: relative;
+  margin: auto;
+  top: -80px;
+  max-width: 640px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: white;
+  border-top: 10px solid #c2b96e; }
+
+.form__header, .form__body {
+  max-width: 640px; }
+
+.form__title, .form__detail {
+  padding: 45px; }
+
+.form__title {
+  font-size: 2.1rem;
+  padding-bottom: 0; }
+
+.form__detail {
+  font-size: 0.8rem;
+  padding-top: 20px;
+  padding-bottom: 20px; }
+
+.form__content {
+  margin: 2px 20px;
+  padding: 20px 25px; }
+
+.reminder {
+  margin-top: 10px;
+  color: white; }
+
+.form__detail p:nth-of-type(2) {
+  font-size: 0.7rem; }
+
+a {
+  color: #0428cc; }
+
+.star {
+  color: #ea3535; }
+
+.form__input {
+  font-size: 1.2rem;
+  padding-bottom: 20px; }
+
+.eg {
+  font-size: 0.8rem; }
+
+input[type="text"], #email {
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  width: 60%;
+  height: 1.3rem; }
+
+#submit {
+  background: #155ded;
+  color: #f8f8f8;
+  width: 90px;
+  height: 40px;
+  border: none;
+  border-radius: 5px; }
+  #submit:hover {
+    cursor: pointer; }
+
+/*# sourceMappingURL=style.css.map */
