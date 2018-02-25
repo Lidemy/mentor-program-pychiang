@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>hw2：仿 Google 表單</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="container__banner"></div>
+        <div class="container__background">
+            <form class="form" onsubmit="return result()" accept-charset="utf-8">
+                <div class="form__header">
+                    <div class="form__title">從零到一：程式導師實驗計畫報名表單</div>
+                    <div class="form__detail">
+                        <p>詳情請參考：<a href="https://medium.com/@hulitw/mentor-program-b5f96ae1eed1">https://medium.com/@hulitw/mentor-program-b5f96ae1eed1</a>
+                            <br>
+                            記得填完表單之後還要寫信報名才算成功，兩者缺一不可！</p>
+                        <p class="star">*必填</p>
+                    </div>
+                </div>
+                <div class="form__body">
+                    <div class="form__content form__email">
+                        <div class="form__input">電子郵件地址 <span class="star">*</span></div>
+                        <input name="email" id="email" type="email" placeholder="你的電子郵件">
+                        <div class="reminder" id="reminder1">這是必填問題</div>
+                    </div>
+                    <div class="form__content form__name">
+                        <div class="form__input">暱稱 <span class="star">*</span>
+                            <br>
+                            <span class="eg">該怎麼稱呼你</span>
+                        </div>
+                        <input name="name" id="name" type="text" placeholder="您的回答">
+                        <div class="reminder" id="reminder2">這是必填問題</div>
+                    </div>
+                    <div class="form__content form__type">
+                        <div class="form__input">報名類型 <span class="star">*</span></div>
+                        <input name="type" id="type1" type="radio" value="type1"><label for="type"> 工程師培養班（每週付出四十小時，從零培養到工程師，學費是一個月薪水）</label>
+                        <br>
+                        <br>
+                        <input name="type" id="type2" type="radio" value="type2"><label for="type"> 業餘班（依照個人目標訂立學習計畫，學費一萬五千元）</label>
+                        <div class="reminder" id="reminder3">這是必填問題</div>
+                    </div>
+                    <div class="form__content form__coding">
+                        <div class="form__input">是否有程式相關背景？ <span class="star">*</span>
+                            <br>
+                            <span class="eg">範例：無、高中時候學過C++、學過一點網頁前端、目前在資策會上課...</span>
+                        </div>
+                        <input name="coding" id="coding" type="text" placeholder="您的回答">
+                        <div class="reminder" id="reminder4">這是必填問題</div>
+                    </div>
+                    <div class="form__content">
+                        <div class="form__input">其他
+                            <br>
+                            <span class="eg">其他任何你想講的</span>
+                        </div>
+                        <input name="other" id="other" type="text" placeholder="您的回答">
+                    </div>
+                    <div class="form__content">
+                        <input name="submit" id="submit" type="submit">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="JS/script.js" type="text/javascript" charset="utf-8" async defer></script>
+</body>
+</html>
