@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>hw4：化繁為簡</title>
+</head>
+<body>
+    <!-- 用來測試的元素 -->
+    <h1>hw4：化繁為簡</h1>
+    <div class="test">123456</div>
+
+    <!-- 使用 style.visibility 跟 style.display 的差異：https://stackoverflow.com/questions/6242976/javascript-hide-show-element -->
+    <script type="text/javascript" charset="utf-8" async defer>
+        function q(selector) {
+            return {
+                show: () => document.querySelector(selector).style.visibility= 'visible',
+
+                hide: () => document.querySelector(selector).style.visibility= 'hidden'
+            }
+        }
+    </script>
+</body>
+</html>
