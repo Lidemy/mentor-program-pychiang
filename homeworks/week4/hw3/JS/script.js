@@ -2,7 +2,8 @@ let offset = 0;
 let isLoading = false;
 const container = document.getElementsByClassName('container')[0];
 
-const getStreams = function() { 
+//connect with Twitch API
+const getStreams = () => { 
     isLoading = true;
 
     const clientID = '30vl9dbtf7whfh5ejeob3myp2gfuyo';
@@ -10,10 +11,14 @@ const getStreams = function() {
     const gameLimit = 20;
     const request = new XMLHttpRequest();
     request.open('GET', `https://api.twitch.tv/kraken/streams?client_id=${clientID}&game=${gameName}&limit=${gameLimit}&offset=${offset}`, true);
-    request.onreadystatechange = function () {
-        if (this.readyState === 4 && this.status === 200) {
+    request.onreadystatechange = function() {
+        //.readyState is used to determine the state of the request, provided by user agent
+        //.status is used to determine whether the request was successful or not, provided by server
+        if (this.readyState === 4 && this.status === 200) { 
             const response = JSON.parse(this.responseText);
-            callBack(null, response);
+            //first argument of callback funtion is used to indicat an error
+            //so first argument is null indicating the operation is successful
+            callBack(null, response);   
         } else {
             callBack(err);
         }
@@ -21,6 +26,7 @@ const getStreams = function() {
     request.send();
 }
 
+//connect Twitch API with jQuery
 //var getStreams = function() {
 //     isLoading = true;
 //     $.ajax({
@@ -41,6 +47,7 @@ const getStreams = function() {
 //     });
 // }
 
+//takes care of error and stream data from Twitch API
 const callBack = function(err, data) {
     if (err) {
         const errorDiv = document.createElement('div');
@@ -63,6 +70,7 @@ const callBack = function(err, data) {
 //insertBefore() refers to the following link:
 //https://stackoverflow.com/questions/19315948/insert-html-before-element-in-javascript-without-jquery
 
+//takes care of how to display the date on HTML
 const getViewbox = (data) => {
     let twitchLiveUrl = `https://www.twitch.tv/${data.channel.name}`;
     return `
@@ -88,7 +96,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 //inifinte scroll without jQuery
-
 // var documentHeight = function () {
 //     var body = document.body;
 //     var html = document.documentElement;
@@ -118,7 +125,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 //jQuery inifinte scroll
-
 // $(document).ready(function() {
 //     getStreams();
 //     $(window).scroll(function() {
